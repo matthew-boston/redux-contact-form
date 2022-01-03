@@ -1,0 +1,20 @@
+.success-card {
+  text-align: center;
+  img {
+    width: 250px;
+    height: 250px;
+    object-fit: fill;
+    border-radius: 50%;
+    margin-bottom: 25px;
+    object-position: center;
+  }
+
+  h1 {
+    color: rgb(70, 141, 76);
+    margin-bottom: 15px;
+  }
+
+  p {
+    color: #444;
+  }
+}
