@@ -25,8 +25,8 @@ const Image = ({success}) => {
 Image.propTypes = {
   success: PropTypes.bool.isRequired,
 }
-const mapStateToPrrops = state =>({
+const mapStateToProps = state =>({
   success: state.form
 })
 
-export default connect(mapStateToPrrops)(Image);
+export default connect(mapStateToProps)(Image);

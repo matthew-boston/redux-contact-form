@@ -1,10 +1,10 @@
 import React, { Fragment, useState } from "react";
 import { connect } from "react-redux";
-import { setAlert, removeAlert } from "../actions/alert";
+import { setAlert } from "../actions/alert";
 import { formSuccess } from "../actions/form";
 import validator from "validator";
 
-const Form = ({ setAlert, removeAlert, formSuccess }) => {
+const Form = ({ setAlert, formSuccess }) => {
   const [formData, setFormData] = useState({ name: "", email: "", message: "" });
   const { name, email, message } = formData;
 
@@ -13,16 +13,12 @@ const Form = ({ setAlert, removeAlert, formSuccess }) => {
   const onSubmit = (e) => {
     e.preventDefault();
 
-    if (name === "" || email === "" || message === "") {
-      // send error to alert action
+    if (validator.isEmpty(name) || validator.isEmpty(email) || validator.isEmpty(message)) {
       setAlert("Please fill fields", "far fa-folder-open");
     } else if (!validator.isEmail(email)) {
       setAlert("Enter a valid Email", "far fa-envelope");
-      // send error to alert action
     } else {
-      removeAlert();
-      // send success message to action
-      formSuccess(name, email, message)
+      formSuccess(name, email, message);
     }
   };
   return (
@@ -48,4 +44,4 @@ const Form = ({ setAlert, removeAlert, formSuccess }) => {
   );
 };
 
-export default connect(null, { setAlert, removeAlert, formSuccess })(Form);
+export default connect(null, { setAlert, formSuccess })(Form);
