@@ -5,7 +5,7 @@ import { formSuccess } from "../actions/form";
 import validator from "validator";
 
 const Form = ({ setAlert, removeAlert, formSuccess }) => {
-  const [formData, setFormData] = useState({ name: "matt", email: "info@mdeev.net", message: "test" });
+  const [formData, setFormData] = useState({ name: "", email: "", message: "" });
   const { name, email, message } = formData;
 
   const onChange = (e) => setFormData({ ...formData, [e.target.name]: e.target.value });
