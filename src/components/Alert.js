@@ -8,7 +8,9 @@ const Alert = ({ alerts }) =>
   alerts.map((alert) => (
     <div key={alert.id} className="alert">
       <i className={alert.icon}></i>
-      <p>{alert.msg}</p>
+      <div className="alert-container">
+        <p>{alert.msg}</p>
+      </div>
     </div>
   ));
 

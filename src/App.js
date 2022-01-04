@@ -13,20 +13,17 @@ import Image from "./components/Image";
 
 import "./scss/main.scss";
 const App = () => {
-
   return (
     <Provider store={store}>
       <Fragment>
         <div className="wrapper">
-          <div className="inner-wrapper">
-            <Image />
+          <div className="left-wrapper">
+            <h1>Get In Touch .</h1>
+            <small>Get in touch with me today. Fill out the form below and we will respond to you as fast as possible. Thank you for contacting us!</small>
+            <Form />
           </div>
           <div className="inner-wrapper">
-            <div className="form-wrapper">
-              <h1>Contact Us</h1>
-              <Alert />
-              <Form />
-            </div>
+            <Image />
           </div>
         </div>
       </Fragment>
