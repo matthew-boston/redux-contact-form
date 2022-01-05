@@ -1,0 +1,62 @@
+@mixin shadow {
+  box-shadow: $shadow-1 4px 4px 10px, $shadow-2 0 0 10px;
+}
+
+@mixin light-shadow {
+  box-shadow: #b9b9b950 4px 4px 10px;
+}
+
+@mixin background-gradient {
+  background: linear-gradient(45deg, $purple, $light-purple, $dark-purple);
+  background-size: 200% 200%;
+  -webkit-animation: AnimationName 30s ease infinite;
+  -moz-animation: AnimationName 30s ease infinite;
+  animation: AnimationName 30s ease infinite;
+  @-webkit-keyframes AnimationName {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+  @-moz-keyframes AnimationName {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+  @keyframes AnimationName {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+}
+
+@mixin fadeIn {
+  animation-name: FadeIn;
+  animation-duration: 1s;
+  transition-timing-function: linear;
+  @keyframes FadeIn {
+    0% {
+      opacity: 0.2;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+}

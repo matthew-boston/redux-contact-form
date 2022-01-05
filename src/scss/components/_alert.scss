@@ -1,0 +1,13 @@
+.alert {
+        
+    display: flex;
+    padding: 10px;
+    align-items: center;
+    color: $text;
+    margin-bottom: 15px;
+    @include fadeIn;
+    i {
+      color: $red;
+      margin-right: 10px;
+    }
+  }

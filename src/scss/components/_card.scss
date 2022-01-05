@@ -1,0 +1,15 @@
+.success-card {
+    text-align: center;
+    img {
+      width: 250px;
+      height: 250px;
+      object-fit: fill;
+      border-radius: 50%;
+      margin-bottom: 25px;
+      object-position: center;
+    }
+  
+    h1 {
+      color: $green;
+    }
+  }
